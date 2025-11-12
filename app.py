@@ -8,3 +8,10 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+@app.route('/versao')
+def versao():
+    versao = "1.1.0"
+    return f"<h1>App v{versao}</h1>"
+
