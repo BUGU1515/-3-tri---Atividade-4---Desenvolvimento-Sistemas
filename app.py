@@ -1,9 +1,9 @@
-from flask import Flask, redirect, template
+from flask import Flask, redirect, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
-def index():
+def home():
     return "<h1>Hello, Flask !!</h1>"
 
 if __name__ == "__main__":
@@ -27,5 +27,10 @@ def quadrado(n):
 
 
 @app.route('/home')
-def home():
+def index():
     return redirect('/')
+
+
+@app.route("/pagina")
+def pagina():
+    return render_template("pagina.html")
