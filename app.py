@@ -15,3 +15,10 @@ def versao():
     versao = "1.1.0"
     return f"<h1>App v{versao}</h1>"
 
+
+@app.get("/saudar/<usuario>") 
+def bemvindo(usuario):
+   return f"<h1>Bem-vindo, {usuario.capitalize()}!<h1>"
+
+
+
