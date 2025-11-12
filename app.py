@@ -21,4 +21,7 @@ def bemvindo(usuario):
    return f"<h1>Bem-vindo, {usuario.capitalize()}!<h1>"
 
 
+@app.route('/quadrado/<int:n>')
+def quadrado(n):
+    return f"{n}² = {n ** 2}"
 
