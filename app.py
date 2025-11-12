@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask, redirect, template
 
 app = Flask(__name__)
 
 @app.route("/")
-def home():
+def index():
     return "<h1>Hello, Flask !!</h1>"
 
 if __name__ == "__main__":
@@ -25,3 +25,7 @@ def bemvindo(usuario):
 def quadrado(n):
     return f"{n}² = {n ** 2}"
 
+
+@app.route('/home')
+def home():
+    return redirect('/')
