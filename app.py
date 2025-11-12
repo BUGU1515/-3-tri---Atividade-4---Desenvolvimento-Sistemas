@@ -34,3 +34,13 @@ def index():
 @app.route("/pagina")
 def pagina():
     return render_template("pagina.html")
+
+
+itens = ["maçã", "banana", "laranja", "uva"]
+@app.route("/buscar/<item>")
+def buscar(item):
+    for i in itens:
+        if i == item:
+            return f"Item '{item}' encontrado!"
+    return f"Item '{item}' não encontrado."
+
